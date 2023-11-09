@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(2, 189, 139);
+}
+main{
+    position: relative;
+}
+main section{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    max-width: 500px;
+    max-height: 350px;
+    background-color: aquamarine;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    transform: translate(-50%, 50%);
+}
+
+main form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    
+}
+
+main form > input{
+    border: none;
+    border-radius: 5px;
+}
+main form > label{
+    padding: 3px;
+
+}
+main form > input:focus{
+    border: rgb(186, 186, 146);
+    background-color: lightgray;
+}
+
