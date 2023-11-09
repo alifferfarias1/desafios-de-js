@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    background-color: black;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Faz com que o corpo da página ocupe toda a altura da janela do navegador */
+}
+
+.container h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-self: baseline;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.711);
+}
+
+
+.container {
+    width: 30vw;
+    height: 60vh;
+    border-radius: 10px;
+    background-color: rgba(77, 232, 232, 0.916);
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente dentro do container */
+    align-items: center; /* Centraliza verticalmente dentro do container */
+}
