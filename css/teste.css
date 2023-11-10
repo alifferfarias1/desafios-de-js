@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/*Usando uma função do Sass, podemos esmaecer a cor primária para usar em componentes de tela que estarão desabilitados*/
+.menu-item {
+  color: #aa612c;
+}
+
+.disabled-menu-item {
+  color: #d79565;
+}
+
+.center {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+
+body.no-content p {
+  display: none;
+}
+
+p {
+  font-size: 20px;
+}
+
+.caixa-de-erro {
+  text-align: left;
+  color: red;
+}
+
+.botao-erro a {
+  background-color: #AE140F;
+  color: white;
+  border-radius: 5px;
+}
+.botao-erro a:hover {
+  color: #7F0A07;
+}
+.botao-erro a:visited {
+  color: #CD3632;
+}
+
+.botao-sucesso a {
+  background-color: #1F9732;
+  color: white;
+  border-radius: 5px;
+}
+.botao-sucesso a:hover {
+  color: #135F1F;
+}
+.botao-sucesso a:visited {
+  color: #50CE64;
+}
+
+.botao-alerta a {
+  background-color: #CBBD28;
+  color: white;
+  border-radius: 5px;
+}
+.botao-alerta a:hover {
+  color: #AC9E08;
+}
+.botao-alerta a:visited {
+  color: #EEE36B;
+}
+
+.padding-em-tudo {
+  padding: 10px;
+}
+
+.padding-no-topo-e-fundo {
+  padding: 10px 20px;
+}
+
+.padding-variado {
+  padding: 10px 5px 20px 5px;
+}
+
+.button, .menu {
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  padding: 5px 10px;
+}
+
+.menu {
+  background-color: green;
+  color: #fff;
+}
+
+/*# sourceMappingURL=teste.css.map */

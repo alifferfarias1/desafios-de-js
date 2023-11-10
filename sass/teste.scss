@@ -1,0 +1,119 @@
+$corprimaria: #aa612c;
+
+/*Usando uma função do Sass, podemos esmaecer a cor primária para usar em componentes de tela que estarão desabilitados*/
+$desabilitado: lighten($corprimaria, 20%);
+
+.menu-item {
+    color: $corprimaria
+}
+
+.disabled-menu-item {
+    color: $desabilitado;
+}
+
+.center {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh; // altura total da tela
+}
+
+p {
+    body.no-content & {
+        display: none;
+    }
+}
+
+$tamanho-medio-fonte: 20px;
+
+p {
+    font-size: $tamanho-medio-fonte;
+}
+
+
+// Para usar o “mixin” criado, basta incluir a diretiva “@include” no seletor em que é necessário aplicar as propriedades atribuídas, o que pode ser visto no código a seguir:
+
+@mixin alinha-esquerda {
+    text-align: left;
+}
+
+.caixa-de-erro {
+    @include alinha-esquerda;
+    color: red;
+}
+
+
+
+@mixin botao ($cor-base, $cor-sobre, $cor-visitado) {
+    a {
+        background-color: $cor-base;
+        color: white;
+        border-radius: 5px;
+
+        &:hover {
+            color: $cor-sobre;
+        }
+
+        &:visited {
+            color: $cor-visitado;
+        }
+    }
+}
+
+.botao-erro {
+    @include botao(#AE140F, #7F0A07, #CD3632);
+}
+
+.botao-sucesso {
+    @include botao(#1F9732, #135F1F, #50CE64);
+}
+
+.botao-alerta {
+    @include botao(#CBBD28, #AC9E08, #EEE36B);
+}
+
+
+// O Sass permite que você determine valores-padrão (default) para as variáveis do mixin:
+// @mixin botao ($cor-base: #AE140F, $cor-sobre: #7F0A07, $cor-visitado: #CD3632) {
+// a {
+//     background-color: $cor-base;
+//     color: white;
+//     border-radius: 5px;
+//     &:hover{
+//         color: $cor-sobre;
+//     }
+
+// utilização
+// .botao-erro{
+//     @include botao; // Sem nenhum parâmetro, ele usa os valores das variáveis-padrão
+// }
+
+@mixin padding-exemplo($espacamento...) {
+    padding: $espacamento;
+}
+
+// utilização
+
+.padding-em-tudo {
+    @include padding-exemplo(10px); // padding:10px
+}
+
+.padding-no-topo-e-fundo {
+    @include padding-exemplo(10px 20px); // padding:10px 20px
+}
+
+.padding-variado {
+    @include padding-exemplo(10px 5px 20px 5px); // padding:10px 5px 20px 5px
+}
+
+.button {
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    padding: 5px 10px;
+}
+
+.menu {
+    @extend .button;
+    background-color: green;
+    color: #fff;
+}
