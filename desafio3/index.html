@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <main>
+        <section class="container">
+            <h2>Calculadora</h2>
+            <form action="post" class="formulario">
+                <label for="numero-um">1° numero</label>
+                <input type="number" name="numero-um" id="numero-um" required>
+
+                <label for="numero-dois">2° numero</label>
+                <input type="number" name="numero-dois" id="numero-dois" required>
+
+                <label for="operador">Operador</label>
+                <input type="text" id="operador"  maxlength="1" required>
+                <button type="submit" id="enviar">Calcular</button>
+            </form>
+            <div id="resultado">
+
+            </div>
+
+        </section>
+    </main>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
