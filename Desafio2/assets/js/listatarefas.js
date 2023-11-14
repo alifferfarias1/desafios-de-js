@@ -1,5 +1,6 @@
 // primeiro vamos selecionar os elementos html que desejamos alterar/mexer
 function listOfTaks(){
+
 const addTarefa = document.querySelector('.tarefa')
 const inputTarefa = document.querySelector('.add-tarefa')
 const inputButton = document.querySelector('.button-add')
