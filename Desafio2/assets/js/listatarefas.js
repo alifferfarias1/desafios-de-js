@@ -1,7 +1,7 @@
 // primeiro vamos selecionar os elementos html que desejamos alterar/mexer
 const inputTarefa = document.querySelector('.add-tarefa')
 const inputBtn = document.querySelector('.button-add')
-const addTarefas = document.querySelector('.tarefas')
+const addTarefas = document.querySelector('.tarefa')
 
 
 function criaLi() {
